@@ -25,8 +25,8 @@ public class flows {
 //        long pos = (long)(2147483647 + 2);
 //        System.out.println(pos);
 
-        long kin = (450 + 3) / 2.0;
-        System.out.println(kin);
+//        long kin = (450 + 3) / 2.0;
+//        System.out.println(kin);
 
     }
 }
