@@ -1,4 +1,4 @@
-package Drill240920;
+package lec240920.Drill240920;
 
 public class ArithmeticOperator1 {
     public static void main(String[] args) {
