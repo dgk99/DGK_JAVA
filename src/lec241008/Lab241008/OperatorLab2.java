@@ -24,7 +24,6 @@ class PermissionManager {
                 result = permissions | (mask << 2);
             } else if (permissions == DELETE) {
                 result = permissions | (mask << 3);
-                System.out.println(Integer.toBinaryString(result));
             }
         }
     }
@@ -34,10 +33,17 @@ class PermissionManager {
         // permission : 확인하려는 권한 (0번째, 1번째, 2번째, 3번째 비트 자리 중 하나)
         // - permission 위치 비트가 1이면 true, 그렇지 않으면 false를 반환
         // - & 연산과 << 연산을 사용해 비트 값을 확인
+
         if (permissions == READ) {
-            boolean check = (result & mask) != 0 ? true : false;
-            return check;
+            mask = 1;
+        } else if (permissions == WRITE) {
+            mask = 1 << 1;
+        } else if (permissions == EDIT) {
+            mask = 1 << 2;
+        } else if (permissions == DELETE) {
+            mask = 1 << 3;
         }
+        boolean check = (result & mask) != 0 ? true : false;
 
         return check; // 반환값은 예시입니다.
     }
@@ -45,7 +51,7 @@ class PermissionManager {
     // 모든 권한 초기화 메서드
     void removeAllPermissions() {
         // permissions 값을 0으로 설정하여 모든 비트를 0으로 만듦
-        permissions &= ~permissions;
+        result &= ~result;
         // 여기에 코드 작성
     }
 }
