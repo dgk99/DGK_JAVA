@@ -9,29 +9,29 @@ public class switch1 {
 //                // 실행 문장
 //        }
 
-        int inputValue = 1;
-
-        // if series
-        if (inputValue == 1) {
-            test.gugudan
-        } else if (inputValue == 2) {
-            test.aToZ
-        } else if (inputValue == 3) {
-            test.matrix
-        }
-
-        // switch
-        switch (inputValue) {
-            case 1:
-                test.gugudan;
-                break;
-            case 2:
-                test.aToZ;
-                break;
-            case 3:
-                test.matrix;
-                break;
-        }
+//        int inputValue = 1;
+//
+//        // if series
+//        if (inputValue == 1) {
+//            test.gugudan
+//        } else if (inputValue == 2) {
+//            test.aToZ
+//        } else if (inputValue == 3) {
+//            test.matrix
+//        }
+//
+//        // switch
+//        switch (inputValue) {
+//            case 1:
+//                test.gugudan;
+//                break;
+//            case 2:
+//                test.aToZ;
+//                break;
+//            case 3:
+//                test.matrix;
+//                break;
+//        }
 
 
 //        char bar = '1';
