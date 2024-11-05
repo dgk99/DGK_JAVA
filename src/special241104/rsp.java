@@ -61,8 +61,6 @@ public class rsp {
 
             int computerInput = (int)(Math.random() * 3);
 
-
-
 //            String comOutput = "";
 //            if (computerInput == 0) {
 //                comOutput = sciRockPaper[0];
@@ -84,6 +82,6 @@ public class rsp {
                 userCount++;
             }
         }
-        System.out.println("총 결과 " + "사용자 "+userCount + " : " + "컴퓨터 " + comCount);
+        System.out.println("총 결과 " + "사용자 " +userCount + " : " + "컴퓨터 " + comCount);
     }
 }
