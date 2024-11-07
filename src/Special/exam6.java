@@ -1,4 +1,4 @@
-package special241104;
+package Special;
 
 import java.util.Scanner;
 

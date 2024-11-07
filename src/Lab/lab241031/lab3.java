@@ -1,4 +1,4 @@
-package lec241031.lab241031;
+package Lab.lab241031;
 
 import java.util.Scanner;
 
