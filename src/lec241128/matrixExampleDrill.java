@@ -10,8 +10,8 @@ public class matrixExampleDrill {
         foo[0] = 900;
 
         for (int i = 0; i < bar.length; i++) {
-            System.out.println("barArray : " + bar[i]);
-            System.out.println("fooArray : " + foo[i]);
+            System.out.print("barArray : " + bar[i]);
+            System.out.println(" fooArray : " + foo[i]);
         }
     }
 }
