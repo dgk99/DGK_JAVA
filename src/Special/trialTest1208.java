@@ -2,7 +2,7 @@ package Special;
 
 import java.util.Scanner;
 
-public class trialTestBasic {
+public class trialTest1208 {
     static void menu() {
         System.out.println("===== 빙고 게임 메뉴 =====");
         System.out.println("1. 빙고판 생성");
@@ -81,12 +81,79 @@ public class trialTestBasic {
                         System.out.println("M 값은 1이상 7이하 양수만 입력 가능합니다.");
                     }
 
+                    // 위 값을 이용해 3차원 배열 생성
+                    bingoBoard = new int[sizeM][sizeN][sizeN];
+
+                    int randNum = 0; // 난수 생성 변수
+                    int bingoSize = sizeN * sizeN; // 빙고 크기
+
+
+                    // 총 M번 반복
+                    for (int m = 0; m < sizeM; m++) {
+                        // 난수 생성
+                        int[] randVector = new int[bingoSize]; // 난수 저장할 배열
+                        for (int c = 0; c < bingoSize;) {
+                            boolean overLapFlag = false;
+                            randNum = (int)(Math.random() * (endNum - startNum + 1)) + startNum;
+
+                            for (int r = 0; r < c; r++) {
+                                if (randVector[r] == randNum){
+                                    overLapFlag = true;
+                                    break;
+                                }
+                            }
+                            if (!overLapFlag) {
+                                randVector[c] = randNum;
+                                c++;
+                            }
+                        }
+                        // 빙고판 생성
+                        int v = 0;
+                        for (int c = 0; c < sizeN; c++) {
+                            for (int r = 0; r < sizeN; r++) {
+                                bingoBoard[m][c][r] = randVector[v];
+                                v++;
+                            }
+                        }
+                    }
+
                     break;
 
                 case 2:
+                    int[] numList = new int[endNum - startNum + 1];
+                    for (int m = 0; m < sizeM; m++) {
+                        for (int c = 0; c < sizeN; c++) {
+                            for (int r = 0; r < sizeN; r++) {
+                                int num = bingoBoard[m][c][r];
+                                numList[num - startNum]++;
+                            }
+                        }
+                    }
+                    int num = startNum;
+                    char star = '*';
+                    for (int q = 0; q < numList.length; q++) {
+                        System.out.print(num + ": " + numList[q] + "회 " + (numList[q] * 100.0 / (sizeM * sizeN * sizeN)) + "%" );
+                        for (int i = 0; i < numList[q]; i++) {
+                            System.out.print(star);
+                        }
+                        System.out.println();
+                        num++;
+                    }
+
                     break;
 
                 case 3:
+                    for (int m = 0; m < sizeM; m++) {
+                        System.out.println("빙고 매트릭스 #" + (m + 1));
+                        for (int c = 0; c < sizeN; c++) {
+                            for (int r = 0; r < sizeN; r++) {
+                                System.out.print(bingoBoard[m][c][r] + "\t");
+                            }
+                            System.out.println();
+                        }
+                        System.out.println();
+                    }
+
                     break;
 
                 default:
