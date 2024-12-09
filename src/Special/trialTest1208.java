@@ -120,6 +120,9 @@ public class trialTest1208 {
                     break;
 
                 case 2:
+                    // 2. 숫자별 발생 빈도 분석콤보 점수 계산
+                    // - 생성된 모든 빙고판에서 각 숫자의 발생 횟수와 백분율을 출력합니다.
+                    // - 10단위 스케일링 히스토그램으로 빈도를 시각화합니다
                     int[] numList = new int[endNum - startNum + 1];
                     for (int m = 0; m < sizeM; m++) {
                         for (int c = 0; c < sizeN; c++) {
@@ -143,6 +146,7 @@ public class trialTest1208 {
                     break;
 
                 case 3:
+                    // 3. 빙고판 출력
                     for (int m = 0; m < sizeM; m++) {
                         System.out.println("빙고 매트릭스 #" + (m + 1));
                         for (int c = 0; c < sizeN; c++) {
@@ -159,14 +163,6 @@ public class trialTest1208 {
                 default:
                     System.out.println("잘못된 입력입니다. 다시 입력하세요.");
             }
-
         }
-
-        // 2. 숫자별 발생 빈도 분석콤보 점수 계산
-        // - 생성된 모든 빙고판에서 각 숫자의 발생 횟수와 백분율을 출력합니다.
-        // - 10단위 스케일링 히스토그램으로 빈도를 시각화합니다
-
-        // 3. 빙고판 출력
-
     }
 }

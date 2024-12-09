@@ -1,4 +1,4 @@
-package middleTest;
+package school1_2Test;
 
 import java.util.Scanner;
 
