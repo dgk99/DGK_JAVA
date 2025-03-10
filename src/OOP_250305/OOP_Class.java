@@ -17,12 +17,12 @@ public class OOP_Class {
 
         int bar[] = new int[5];
 
-        Car car1 = new Car();
-        Car car2 = new Car();
+        Car4 car1 = new Car4();
+        Car4 car2 = new Car4();
 
-        car2.name = "BMW";
-
-        car2.prtName();
+//        car2.name = "BMW";
+//
+//        car2.prtName();
 
     }
 }
