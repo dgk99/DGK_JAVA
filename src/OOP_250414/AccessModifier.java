@@ -10,6 +10,6 @@ class Bar {
 public class AccessModifier {
     public static void main(String[] args) {
         Bar b = new Bar();
-        System.out.println(b.x); // 멤버변수
+//        System.out.println(b.x); // 멤버변수
     }
 }
