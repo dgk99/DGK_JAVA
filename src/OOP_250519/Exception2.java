@@ -5,7 +5,7 @@ import java.security.cert.CertificateException;
 
 class Bar {
     void prt() {
-        throw new IOException();
+//        throw new IOException();
     }
 }
 
